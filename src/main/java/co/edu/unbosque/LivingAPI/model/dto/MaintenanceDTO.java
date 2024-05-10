@@ -1,27 +1,17 @@
-package co.edu.unbosque.LivingAPI.model.entities;
+package co.edu.unbosque.LivingAPI.model.dto;
 
-import jakarta.persistence.*;
+public class MaintenanceDTO {
 
-@Entity
-@Table
-public class Maintenance {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column()
     private String name;
-    @Column()
     private String description;
-    @Column()
     private boolean status;
-    @Column()
     private double price;
 
-    public Maintenance() {
+    public MaintenanceDTO() {
     }
 
-    public Maintenance(int id, String name, String description, boolean status, double price) {
+    public MaintenanceDTO(int id, String name, String description, boolean status, double price) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -71,7 +61,7 @@ public class Maintenance {
 
     @Override
     public String toString() {
-        return "Maintenance{" +
+        return "MaintenanceDTO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
