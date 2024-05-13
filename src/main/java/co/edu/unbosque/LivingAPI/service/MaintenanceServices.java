@@ -2,16 +2,16 @@ package co.edu.unbosque.LivingAPI.service;
 
 import co.edu.unbosque.LivingAPI.exception.MaintenanceNotFoundException;
 import co.edu.unbosque.LivingAPI.model.dto.ServiceDTO;
-import co.edu.unbosque.LivingAPI.repository.MaintenanceRepository;
+import co.edu.unbosque.LivingAPI.repository.ServiceRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 @Service
 public class MaintenanceServices {
 
-    public final MaintenanceRepository maintenanceRepository;
+    public final ServiceRepository maintenanceRepository;
 
-    public MaintenanceServices(MaintenanceRepository maintenanceRepository) {
+    public MaintenanceServices(ServiceRepository maintenanceRepository) {
         this.maintenanceRepository = maintenanceRepository;
     }
 
